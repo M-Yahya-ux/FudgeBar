@@ -23,6 +23,9 @@
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-dark text-white">
+
+
+
   <div class="container my-5">
     <h2 class="text-center mb-4">Confirm Your Order</h2>
     <form id="orderForm" class="bg-light text-dark p-4 rounded shadow-lg" novalidate>
@@ -30,6 +33,9 @@
       <div class="mb-3">
         <label for="product" class="form-label">Selected Portion</label>
         <input type="text" id="product" name="product" class="form-control" readonly>
+        <small class="text-muted">
+           * 250PKR Delivery Charges
+            </small>
       </div>
 
       <div class="mb-3">
@@ -37,15 +43,21 @@
         <input type="text" id="name" name="name" class="form-control" required>
       </div>
 
-      <div class="mb-3">
-        <label for="address" class="form-label">Address</label>
-        <input type="text" id="address" name="address" class="form-control" required>
-      </div>
+          <!-- Delivery Area Note -->
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" id="address" name="address" class="form-control" required>
+            <small class="text-muted">
+           * Currently delivering only in Rawalpindi (Bahria Town Phase 1-8, DHA 1-2, Askari-14, Scheme 3)
+            </small>
+        </div>
+        
 
-      <div class="mb-3">
-        <label for="phone" class="form-label">Phone Number</label>
-        <input type="tel" id="phone" name="phone" class="form-control" required>
-      </div>
+      <!-- PHONE FIELD -->
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required pattern="[0-9]{10,15}" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+        </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Email (optional)</label>
@@ -57,101 +69,99 @@
 
   </div>
 
-<!-- Footer -->
-<footer class="bg-dark text-light pt-5 pb-4">
-  <div class="container">
-    <div class="row align-items-start justify-content-between">
-
-      <!-- Brand Info -->
-      <div class="col-md-4 mb-4 d-flex align-items-start">
-        <img src="images/logot.png" alt="FudgeBar Logo" style="height: 40px; margin-right: 10px;" />
-        <div>
-          <h4 class="fw-bold mb-1">FudgeBar</h4>
-          <p class="small mb-0">
-            Baked with love in Islamabad & Rawalpindi.<br>
-            Where every bite is a mood, and every box is a vibe.
+  <footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+      <div class="row align-items-start justify-content-between text-center text-md-start">
+        
+        <!-- Brand Info -->
+        <div class="col-md-4 mb-4 d-flex flex-column flex-md-row align-items-center align-items-md-start">
+          <img src="images/logot.png" alt="FudgeBar Logo" style="height: 40px; margin-right: 10px;" class="mb-2 mb-md-0" />
+          <div>
+            <h4 class="fw-bold mb-1">FudgeBar</h4>
+            <p class="small mb-0">
+              Baked with love in Islamabad & Rawalpindi.<br>
+              Where every bite is a mood, and every box is a vibe.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Get in Touch -->
+        <div class="col-md-4 mb-4 text-center text-md-center" id="contact">
+          <h5 class="fw-bold">Get in Touch</h5>
+          <p class="mb-1">📞 0310-5155557</p>
+          <p class="mb-1">
+            📧 <a href="mailto:fudgebarpk@gmail.com" class="text-decoration-none text-light">fudgebarpk@gmail.com</a>
           </p>
+          <a href="terms.html" class="text-light text-decoration-none d-block mt-2">Terms & Conditions</a>
+          <small class="text-muted d-block mt-1">By placing an order, you agree to our terms.</small>
+        </div>
+  
+        <!-- Social Links -->
+        <div class="col-md-4 mb-4 text-center text-md-end">
+          <h5 class="fw-bold">Follow Us</h5>
+          <a href="https://www.instagram.com/fudgebar.pk?igsh=endyYzFweGgzenJo" target="_blank" class="text-light me-3 text-decoration-none">
+            <i class="bi bi-instagram fs-4"></i>
+          </a>
+          <a href="https://facebook.com/fudgebarpk" target="_blank" class="text-light me-3 text-decoration-none">
+            <i class="bi bi-facebook fs-4"></i>
+          </a>
+          <a href="https://wa.me/923105155557" target="_blank" class="text-light text-decoration-none">
+            <i class="bi bi-whatsapp fs-4"></i>
+          </a>
         </div>
       </div>
-
-      <!-- Get in Touch -->
-      <div class="col-md-4 mb-4 text-center text-md-center" id="contact">
-        <h5 class="fw-bold">Get in Touch</h5>
-        <p class="mb-1">📞 0310-5155557</p>
-        <p class="mb-1">
-          📧 <a href="mailto:fudgebarpk@gmail.com" class="text-decoration-none text-light">fudgebarpk@gmail.com</a>
-        </p>
-        <a href="terms.html" class="text-light text-decoration-none d-block mt-2">Terms & Conditions</a>
-        <small class="text-muted d-block mt-1">By placing an order, you agree to our terms.</small>
+  
+      <!-- Bottom Note -->
+      <hr class="border-light mt-4" />
+      <div class="text-center small text-light">
+        &copy; 2025 FudgeBar.pk — All rights reserved.<br>
+        Designed by <a href="https://vertech-horizon.vercel.app" target="_blank" class="text-light text-decoration-none fw-semibold">Vertech Horizon</a>
       </div>
-
-      <!-- Social Links -->
-      <div class="col-md-4 mb-4 text-end">
-        <h5 class="fw-bold">Follow Us</h5>
-        <a href="https://www.instagram.com/fudgebar.pk?igsh=endyYzFweGgzenJo" target="_blank" class="text-light me-3 text-decoration-none">
-          <i class="bi bi-instagram fs-4"></i>
-        </a>
-        <a href="https://facebook.com/fudgebarpk" target="_blank" class="text-light me-3 text-decoration-none">
-          <i class="bi bi-facebook fs-4"></i>
-        </a>
-        <a href="https://wa.me/923105155557" target="_blank" class="text-light text-decoration-none">
-          <i class="bi bi-whatsapp fs-4"></i>
-        </a>
-      </div>
-
     </div>
-
-    <!-- Bottom Note -->
-    <hr class="border-light mt-4" />
-    <div class="text-center small text-light">
-      &copy; 2025 FudgeBar.pk — All rights reserved.<br>
-      Designed by <a href="https://vertech-horizon.vercel.app" target="_blank" class="text-light  fw-semibold">Vertech Horizon</a>
-    </div>
-  </div>
-</footer>
+  </footer>
+  
 
   
 
   <script>
-    // Get query parameters from URL
     const params = new URLSearchParams(window.location.search);
     const item = params.get("item") || "Selected Portion";
     const tagline = params.get("tagline") || "";
-    const price = params.get("price") || "";
-
-    // Fill product info in form
-    document.getElementById("product").value = `${item} – ${tagline} | ${price} PKR`;
-
-    // Form submission handler
+    const basePrice = parseInt(params.get("price")) || 0;
+    const deliveryCharges = 250;
+    const finalPrice = basePrice + deliveryCharges;
+  
+    document.getElementById("product").value = `${item} – ${tagline} | ${basePrice} + ${deliveryCharges} = ${finalPrice} PKR`;
+  
     document.getElementById("orderForm").addEventListener("submit", function (e) {
       e.preventDefault();
-
+  
       const name = document.getElementById("name").value.trim();
       const address = document.getElementById("address").value.trim();
       const phone = document.getElementById("phone").value.trim();
       const email = document.getElementById("email").value.trim();
-
+  
       if (!name || !address || !phone) {
         alert("Please fill in all required fields: Name, Address, and Phone Number.");
         return;
       }
-
+  
       const message =
         `Hi! I'd like to place an order:\n\n` +
-        `🍫 *Order*: ${item} – ${tagline}\n💵 *Price*: ${price} PKR\n\n` +
+        `🍫 *Order*: ${item} – ${tagline}\n💵 *Subtotal*: ${basePrice} PKR\n🚚 *Delivery*: ${deliveryCharges} PKR\n💰 *Total*: ${finalPrice} PKR\n\n` +
         `👤 *Name*: ${name}\n📍 *Address*: ${address}\n📞 *Phone*: ${phone}` +
         (email ? `\n📧 *Email*: ${email}` : "");
-
-      const confirmDetails = confirm(
-        `Please confirm your details:\n\n${message.replace(/\*/g, "")}`
-      );
-
+  
+      const confirmDetails = confirm(`Please confirm your details:\n\n${message.replace(/\*/g, "")}`);
+  
       if (confirmDetails) {
         const encoded = encodeURIComponent(message);
         window.open(`https://wa.me/923105155557?text=${encoded}`, "_blank");
       }
     });
   </script>
-
+  
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
