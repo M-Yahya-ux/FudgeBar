@@ -1,0 +1,17 @@
+#feedback .form-control {
+    background-color: #fefefe;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #000;
+  }
+  
+  #feedback textarea.form-control {
+    resize: none;
+  }
+.feedbacksection{
+  
+    background-image: url('/images/bg-03.png') !important;
+    background-position: center !important;
+    background-size: cover !important;
+    position: relative !important;
+}  

@@ -1,0 +1,110 @@
+.image-section {
+    background-color: #ffffff;
+    padding: 60px 0; /* optional spacing around the container */
+  }
+  
+  .image-box {
+    background-image: url('/images/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  
+    height: 50vh;
+    width: 50%;
+  
+    border-radius: 30px;
+    overflow: hidden;
+  
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
+  
+    animation: floatLeftRight 4s ease-in-out infinite alternate;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes floatLeftRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50px);
+    }
+  }
+  
+  /* ✅ Responsive: Mobile Screens */
+  @media (max-width: 768px) {
+    .image-box {
+      width: 90%;
+      height: 40vh;
+      background-size: cover; /* better for small screens */
+      animation: floatLeftRightMobile 3s ease-in-out infinite alternate;
+    }
+  
+    @keyframes floatLeftRightMobile {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(20px);
+      }
+    }
+  }
+  
+  
+  
+  #menu{
+    background-color: #48261c;
+    background: #48261c !important;
+    background-image: url('/images/bg02.png') !important;
+    background-position: center !important;
+    background-size: cover !important;
+    overflow: hidden !important;
+  }
+  
+
+  #menu .card {
+    border: none !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.15) !important; /* semi-transparent white */
+
+    backdrop-filter: blur(5px) !important; /* the blur effect */
+    -webkit-backdrop-filter: blur(5px) !important; /* for Safari */
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  #menu .card img {
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  #menu .card h4,
+  #menu .card h5,
+  #menu .card p {
+    margin-bottom: 0.5rem;
+  }
+  
+  #menu .card a {
+    margin-top: auto;
+  }
+  
+  #menu .card h4{
+    font-family: 'Rubik Mono One', sans-serif !important;
+  }
+
+
+
+
+
+  .carousel-control-prev {
+    left: -70px; /* Move more to the left */
+  }
+  
+  .carousel-control-next {
+    right: -70px; /* Move more to the right */
+  }
+  

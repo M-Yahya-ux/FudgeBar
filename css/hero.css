@@ -1,0 +1,49 @@
+/* Base styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+
+  }
+  
+  .hero-section {
+    height: 98vh;
+    background: url('../images/mainbg.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-text h1 {
+    font-size: 4rem;
+    font-family: 'Rubik Mono One', sans-serif !important;
+  }
+  
+  .hero-text .text-highlight {
+    color: #d4a373; /* Optional: highlight color for 'FudgeLab' */
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 500px;
+  }
+  
+  .hero-text a.btn {
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hero-text a.btn-light:hover {
+    background-color: #d4a373;
+    color: #fff;
+    border-color: #d4a373;
+  }
+  
+  .hero-text a.btn-outline-light:hover {
+    background-color: white;
+    color: #2a1708;
+  }
+  
