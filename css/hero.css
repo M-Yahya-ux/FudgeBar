@@ -18,6 +18,11 @@ body, html {
     font-size: 4rem;
     font-family: 'Rubik Mono One', sans-serif !important;
   }
+  @media (max-width:768px){
+    .hero-text h1{
+        font-size: 2rem !important;
+    }
+  }
   
   .hero-text .text-highlight {
     color: #d4a373; /* Optional: highlight color for 'FudgeLab' */
