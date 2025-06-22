@@ -7,7 +7,12 @@ async function connectToDatabase() {
   if (cachedClient) return cachedClient;
   console.log("🔌 Connecting to MongoDB URI:", uri?.slice(0, 50) + "...");
 
-  const client = new MongoClient(uri);
+  const client = new MongoClient(uri, {
+    serverApi: { version: '1', strict: true, deprecationErrors: true },
+    ssl: true,
+    tlsAllowInvalidCertificates: false
+  });
+
   await client.connect();
   cachedClient = client;
   return client;
