@@ -5,6 +5,8 @@ let cachedClient = null;
 
 async function connectToDatabase() {
   if (cachedClient) return cachedClient;
+  console.log("🔌 Connecting to MongoDB URI:", uri?.slice(0, 50) + "...");
+
   const client = new MongoClient(uri);
   await client.connect();
   cachedClient = client;
@@ -17,10 +19,13 @@ export default async function handler(req, res) {
   const { name, address, phone, email, product } = req.body;
 
   if (!name || !address || !phone || !product) {
+    console.warn("⚠️ Missing required fields");
     return res.status(400).json({ error: "Missing required fields" });
   }
 
   try {
+    console.log("🛒 Inserting order for:", name, phone);
+
     const client = await connectToDatabase();
     const db = client.db("fudgebar");
 
@@ -33,8 +38,10 @@ export default async function handler(req, res) {
       createdAt: new Date(),
     });
 
+    console.log("✅ Order inserted into MongoDB");
     res.status(200).json({ success: true });
   } catch (err) {
+    console.error("❌ MongoDB Error:", err.message);
     res.status(500).json({ success: false, error: err.message });
   }
 }
