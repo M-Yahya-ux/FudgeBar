@@ -159,7 +159,7 @@
       if (!confirmDetails) return;
   
       try {
-        const res = await fetch("/api/submitOrder.js", {
+        const res = await fetch("/api/submitOrder", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
