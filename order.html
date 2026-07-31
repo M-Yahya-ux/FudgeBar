@@ -31,10 +31,10 @@
     <form id="orderForm" class="bg-light text-dark p-4 rounded shadow-lg" novalidate>
 
       <div class="mb-3">
-        <label for="product" class="form-label">Selected Portion</label>
+        <label for="product" class="form-label">Selected Item</label>
         <input type="text" id="product" name="product" class="form-control" readonly>
         <small class="text-muted">
-           * 250PKR Delivery Charges
+           * 80 PKR Delivery Charges
             </small>
       </div>
 
@@ -125,10 +125,10 @@
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    const item = params.get("item") || "Selected Portion";
+    const item = params.get("item") || "Selected Item";
     const tagline = params.get("tagline") || "";
     const basePrice = parseInt(params.get("price")) || 0;
-    const deliveryCharges = 250;
+    const deliveryCharges = 80;
     const finalPrice = basePrice + deliveryCharges;
   
     const productValue = `${item} – ${tagline} | ${basePrice} + ${deliveryCharges} = ${finalPrice} PKR`;

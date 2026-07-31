@@ -44,6 +44,7 @@
             <li class="nav-item"><a class="nav-link text-white" href="#hero">Home</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#how-to-order">How to Order</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#bundles">Bundles</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -83,206 +84,234 @@
 <!-- MENU SECTION -->
 <section id="menu" class="py-5 bg-dark text-white">
     <div class="container">
-      <h2 class="text-center display-5 fw-bold">Pick Your Portion</h2>
-      <p class="text-center lead mb-5">From Bite to Binge</p>
-  
+      <h2 class="text-center display-5 fw-bold">Our Menu</h2>
+      <p class="text-center lead mb-2">Soft &middot; Chewy &middot; Fudgy</p>
+      <p class="text-center small mb-5 fst-italic">Available for Delivery Only</p>
+
       <!-- Carousel for Desktop -->
-      <div id="brownieCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+      <div id="brownieCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel" data-bs-interval="6000">
         <div class="carousel-inner">
-      
-          <!-- Slide 1 -->
+
+          <!-- Slide 1 : Classic Collection -->
           <div class="carousel-item active">
+            <h3 class="text-center fw-bold mb-4 collection-title">Classic Collection</h3>
             <div class="row justify-content-center g-4">
-      
-              <!-- Solo Fudge Hit -->
-              <div class="col-md-4">
-                <div class="card h-100 text-dark text-center p-3 rounded-4">
-                  <img src="images/brownies.png" alt="Solo Fudge Hit" class="img-fluid rounded mb-3 menu-img">
-                  <h4>Solo Fudge Hit</h4>
-                  <h5>1 Brownie – One Bite Won’t Hurt</h5>
-                  <p class="small text-muted">Because one bite is sometimes enough.</p>
-                  <p class="fw-bold mb-3">150 PKR</p>
-                  <a href="order.html?item=Solo%20Fudge%20Hit&tagline=1%20Brownie%20–%20Just%20a%20Little%20Crave&price=150"
-                    target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+
+              <!-- Classic Brownie -->
+              <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-white text-center p-3 rounded-4">
+                  <img src="images/brownies.png" alt="Classic Brownie" class="img-fluid rounded mb-3 menu-img">
+                  <h4>Classic Brownie</h4>
+                  <p class="small">The original. Rich, fudgy, unfussy.</p>
+                  <p class="fw-bold mb-3">280 PKR</p>
+                  <a href="order.html?item=Classic%20Brownie&tagline=Classic%20Collection&price=280"
+                     target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
                 </div>
               </div>
-      
-              <!-- Mini Mood Pack -->
-              <div class="col-md-4">
-                <div class="card h-100 text-dark text-center p-3 rounded-4">
-                  <img src="images/brownies.png" alt="Mini Mood Pack" class="img-fluid rounded mb-3 menu-img">
-                  <h4>Mini Mood Pack</h4>
-                  <h5>4 Brownies – Just a Little Crave</h5>
-                  <p class="small text-muted">But four will definitely test your willpower.</p>
-                  <p class="fw-bold mb-3">600 PKR</p>
-                  <a href="order.html?item=Mini%20Mood%20Pack&tagline=4%20Brownies%20–%20One%20Bite%20Won’t%20Hurt&price=600"
-                    target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+
+              <!-- Chocolate Chip -->
+              <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-white text-center p-3 rounded-4">
+                  <img src="images/brownies.png" alt="Chocolate Chip Brownie" class="img-fluid rounded mb-3 menu-img">
+                  <h4>Chocolate Chip</h4>
+                  <p class="small">Loaded with pockets of melty chocolate.</p>
+                  <p class="fw-bold mb-3">310 PKR</p>
+                  <a href="order.html?item=Chocolate%20Chip%20Brownie&tagline=Classic%20Collection&price=310"
+                     target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
                 </div>
               </div>
-      
-              <!-- Crave Crasher -->
-              <div class="col-md-4">
-                <div class="card h-100 text-dark text-center p-3 rounded-4">
-                  <img src="images/brownies.png" alt="Crave Crasher" class="img-fluid rounded mb-3 menu-img">
-                  <h4>Crave Crasher</h4>
-                  <h5>8 Brownies – Brownies Before Bros</h5>
-                  <p class="small text-muted">For the real ones who stick with fudge.</p>
-                  <p class="fw-bold mb-3">1200 PKR</p>
-                  <a href="order.html?item=Crave%20Crasher&tagline=8%20Brownies%20–%20Brownies%20Before%20Bros&price=1200"
-                    target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+
+              <!-- Nutty Brownie -->
+              <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-white text-center p-3 rounded-4">
+                  <img src="images/brownies.png" alt="Nutty Brownie" class="img-fluid rounded mb-3 menu-img">
+                  <h4>Nutty Brownie</h4>
+                  <p class="small">Toasted nuts in every single bite.</p>
+                  <p class="fw-bold mb-3">310 PKR</p>
+                  <a href="order.html?item=Nutty%20Brownie&tagline=Classic%20Collection&price=310"
+                     target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
                 </div>
               </div>
+
+              <!-- Caramel Topped -->
+              <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-white text-center p-3 rounded-4">
+                  <img src="images/brownies.png" alt="Caramel Topped Brownie" class="img-fluid rounded mb-3 menu-img">
+                  <h4>Caramel Topped</h4>
+                  <p class="small">Finished with a golden caramel swirl.</p>
+                  <p class="fw-bold mb-3">310 PKR</p>
+                  <a href="order.html?item=Caramel%20Topped%20Brownie&tagline=Classic%20Collection&price=310"
+                     target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+                </div>
+              </div>
+
             </div>
           </div>
-      
-          <!-- Slide 2 -->
+
+          <!-- Slide 2 : Premium Collection -->
           <div class="carousel-item">
+            <h3 class="text-center fw-bold mb-4 collection-title">Premium Collection</h3>
             <div class="row justify-content-center g-4">
-      
-              <!-- The Fudge Fix -->
+
+              <!-- Matcha Brownie -->
               <div class="col-md-4">
-                <div class="card h-100 text-dark text-center p-3 rounded-4">
-                  <img src="images/brownies.png" alt="The Fudge Fix" class="img-fluid rounded mb-3 menu-img">
-                  <h4>The Fudge Fix</h4>
-                  <h5>12 Brownies – I Deserve This</h5>
-                  <p class="small text-muted">Self-care, the chocolatey way.</p>
-                  <p class="fw-bold mb-3">1800 PKR</p>
-                  <a href="order.html?item=The%20Fudge%20Fix&tagline=12%20Brownies%20–%20I%20Deserve%20This&price=1800"
-                    target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+                <div class="card h-100 text-white text-center p-3 rounded-4">
+                  <img src="images/brownies.png" alt="Matcha Brownie" class="img-fluid rounded mb-3 menu-img">
+                  <h4>Matcha Brownie</h4>
+                  <p class="small">Premium matcha, earthy and smooth.</p>
+                  <p class="fw-bold mb-3">380 PKR</p>
+                  <a href="order.html?item=Matcha%20Brownie&tagline=Premium%20Collection&price=380"
+                     target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
                 </div>
               </div>
-      
-              <!-- Sweet Seventeen -->
-              <div class="col-md-4">
-                <div class="card h-100 text-dark text-center p-3 rounded-4">
-                  <img src="images/brownies.png" alt="Sweet Seventeen" class="img-fluid rounded mb-3 menu-img">
-                  <h4>Sweet Sixteen</h4>
-                  <h5>16 Brownies – Brownie Era: Activated</h5>
-                  <p class="small text-muted">This isn’t a snack—it’s a lifestyle.</p>
-                  <p class="fw-bold mb-3">2400 PKR</p>
-                  <a href="order.html?item=Sweet%20Seventeen&tagline=16%20Brownies%20–%20Brownie%20Era%3A%20Activated&price=2400"
-                    target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
-                </div>
-              </div>
-      
-              <!-- Fudge Fiesta -->
-              <div class="col-md-4">
-                <div class="card h-100 text-dark text-center p-3 rounded-4">
-                  <img src="images/brownies.png" alt="Fudge Fiesta" class="img-fluid rounded mb-3 menu-img">
-                  <h4>Fudge Fiesta</h4>
-                  <h5>24 Brownies – Fudge Overload</h5>
-                  <p class="small text-muted">Sharing optional. Regret unlikely.</p>
-                  <p class="fw-bold mb-3">3600 PKR</p>
-                  <a href="order.html?item=Fudge%20Fiesta&tagline=24%20Brownies%20–%20Fudge%20Overload&price=3600"
-                    target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
-                </div>
-              </div>
-      
+
             </div>
           </div>
-      
+
         </div>
-      
+
         <!-- Carousel Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#brownieCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#brownieCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+          <span class="visually-hidden">Next</span>
         </button>
-      </div>
-      
-  
-      <!-- Stacked Cards for Mobile -->
-      <div class="d-block d-md-none mt-4">
-        <div class="row g-4">
-      
-          <!-- Solo Fudge Hit -->
-          <div class="col-12">
-            <div class="card h-100 text-dark text-center p-3 rounded-4">
-              <img src="images/brownies.png" alt="Solo Fudge Hit" class="img-fluid rounded mb-3 menu-img">
-              <h4>Solo Fudge Hit</h4>
-              <h5>1 Brownie –  One Bite Won’t Hurt</h5>
-              <p class="small text-muted">Because one bite is sometimes enough.</p>
-              <p class="fw-bold mb-3">150 PKR</p>
-              <a href="order.html?item=Solo%20Fudge%20Hit&tagline=1%20Brownie%20–%20Just%20a%20Little%20Crave&price=150"
-                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
-            </div>
-          </div>
-      
-          <!-- Mini Mood Pack -->
-          <div class="col-12">
-            <div class="card h-100 text-dark text-center p-3 rounded-4">
-              <img src="images/brownies.png" alt="Mini Mood Pack" class="img-fluid rounded mb-3 menu-img">
-              <h4>Mini Mood Pack</h4>
-              <h5>4 Brownies – Just a Little Crave</h5>
-              <p class="small text-muted">But four will definitely test your willpower.</p>
-              <p class="fw-bold mb-3">600 PKR</p>
-              <a href="order.html?item=Mini%20Mood%20Pack&tagline=4%20Brownies%20–%20One%20Bite%20Won’t%20Hurt&price=600"
-                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
-            </div>
-          </div>
-      
-          <!-- Crave Crasher -->
-          <div class="col-12">
-            <div class="card h-100 text-dark text-center p-3 rounded-4">
-              <img src="images/brownies.png" alt="Crave Crasher" class="img-fluid rounded mb-3 menu-img">
-              <h4>Crave Crasher</h4>
-              <h5>8 Brownies – Brownies Before Bros</h5>
-              <p class="small text-muted">For the real ones who stick with fudge.</p>
-              <p class="fw-bold mb-3">1200 PKR</p>
-              <a href="order.html?item=Crave%20Crasher&tagline=8%20Brownies%20–%20Brownies%20Before%20Bros&price=1200"
-                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
-            </div>
-          </div>
-      
-          <!-- The Fudge Fix -->
-          <div class="col-12">
-            <div class="card h-100 text-dark text-center p-3 rounded-4">
-              <img src="images/brownies.png" alt="The Fudge Fix" class="img-fluid rounded mb-3 menu-img">
-              <h4>The Fudge Fix</h4>
-              <h5>12 Brownies – I Deserve This</h5>
-              <p class="small text-muted">Self-care, the chocolatey way.</p>
-              <p class="fw-bold mb-3">1800 PKR</p>
-              <a href="order.html?item=The%20Fudge%20Fix&tagline=12%20Brownies%20–%20I%20Deserve%20This&price=1800"
-                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
-            </div>
-          </div>
-      
-          <!-- Sweet Seventeen -->
-          <div class="col-12">
-            <div class="card h-100 text-dark text-center p-3 rounded-4">
-              <img src="images/brownies.png" alt="Sweet Seventeen" class="img-fluid rounded mb-3 menu-img">
-              <h4>Sweet Sixteen</h4>
-              <h5>16 Brownies – Brownie Era: Activated</h5>
-              <p class="small text-muted">This isn’t a snack—it’s a lifestyle.</p>
-              <p class="fw-bold mb-3">2400 PKR</p>
-              <a href="order.html?item=Sweet%20Seventeen&tagline=16%20Brownies%20–%20Brownie%20Era%3A%20Activated&price=2400"
-                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
-            </div>
-          </div>
-      
-          <!-- Fudge Fiesta -->
-          <div class="col-12">
-            <div class="card h-100 text-dark text-center p-3 rounded-4">
-              <img src="images/brownies.png" alt="Fudge Fiesta" class="img-fluid rounded mb-3 menu-img">
-              <h4>Fudge Fiesta</h4>
-              <h5>24 Brownies – Fudge Overload</h5>
-              <p class="small text-muted">Sharing optional. Regret unlikely.</p>
-              <p class="fw-bold mb-3">3600 PKR</p>
-              <a href="order.html?item=Fudge%20Fiesta&tagline=24%20Brownies%20–%20Fudge%20Overload&price=3600"
-                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
-            </div>
-          </div>
-      
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators position-static mt-4 mb-0">
+          <button type="button" data-bs-target="#brownieCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Classic Collection"></button>
+          <button type="button" data-bs-target="#brownieCarousel" data-bs-slide-to="1" aria-label="Premium Collection"></button>
         </div>
       </div>
-      
-  
-  
+
+
+      <!-- Stacked Cards for Mobile -->
+      <div class="d-block d-md-none mt-4">
+
+        <h3 class="text-center fw-bold mb-4 collection-title">Classic Collection</h3>
+        <div class="row g-4 mb-5">
+
+          <!-- Classic Brownie -->
+          <div class="col-12">
+            <div class="card h-100 text-white text-center p-3 rounded-4">
+              <img src="images/brownies.png" alt="Classic Brownie" class="img-fluid rounded mb-3 menu-img">
+              <h4>Classic Brownie</h4>
+              <p class="small">The original. Rich, fudgy, unfussy.</p>
+              <p class="fw-bold mb-3">280 PKR</p>
+              <a href="order.html?item=Classic%20Brownie&tagline=Classic%20Collection&price=280"
+                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+            </div>
+          </div>
+
+          <!-- Chocolate Chip -->
+          <div class="col-12">
+            <div class="card h-100 text-white text-center p-3 rounded-4">
+              <img src="images/brownies.png" alt="Chocolate Chip Brownie" class="img-fluid rounded mb-3 menu-img">
+              <h4>Chocolate Chip</h4>
+              <p class="small">Loaded with pockets of melty chocolate.</p>
+              <p class="fw-bold mb-3">310 PKR</p>
+              <a href="order.html?item=Chocolate%20Chip%20Brownie&tagline=Classic%20Collection&price=310"
+                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+            </div>
+          </div>
+
+          <!-- Nutty Brownie -->
+          <div class="col-12">
+            <div class="card h-100 text-white text-center p-3 rounded-4">
+              <img src="images/brownies.png" alt="Nutty Brownie" class="img-fluid rounded mb-3 menu-img">
+              <h4>Nutty Brownie</h4>
+              <p class="small">Toasted nuts in every single bite.</p>
+              <p class="fw-bold mb-3">310 PKR</p>
+              <a href="order.html?item=Nutty%20Brownie&tagline=Classic%20Collection&price=310"
+                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+            </div>
+          </div>
+
+          <!-- Caramel Topped -->
+          <div class="col-12">
+            <div class="card h-100 text-white text-center p-3 rounded-4">
+              <img src="images/brownies.png" alt="Caramel Topped Brownie" class="img-fluid rounded mb-3 menu-img">
+              <h4>Caramel Topped</h4>
+              <p class="small">Finished with a golden caramel swirl.</p>
+              <p class="fw-bold mb-3">310 PKR</p>
+              <a href="order.html?item=Caramel%20Topped%20Brownie&tagline=Classic%20Collection&price=310"
+                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="text-center fw-bold mb-4 collection-title">Premium Collection</h3>
+        <div class="row g-4">
+
+          <!-- Matcha Brownie -->
+          <div class="col-12">
+            <div class="card h-100 text-white text-center p-3 rounded-4">
+              <img src="images/brownies.png" alt="Matcha Brownie" class="img-fluid rounded mb-3 menu-img">
+              <h4>Matcha Brownie</h4>
+              <p class="small">Premium matcha, earthy and smooth.</p>
+              <p class="fw-bold mb-3">380 PKR</p>
+              <a href="order.html?item=Matcha%20Brownie&tagline=Premium%20Collection&price=380"
+                 target="_blank" class="btn btn-dark w-75 mx-auto">Order</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </section>
-  
+
+
+  <!-- BUNDLE DEALS SECTION -->
+  <section id="bundles" class="py-5 text-white">
+    <div class="container">
+      <h2 class="text-center display-5 fw-bold">Bundle Deals</h2>
+      <p class="text-center lead mb-5">More brownies, better price.</p>
+
+      <div class="row justify-content-center g-4">
+
+        <!-- Any 2 Brownies -->
+        <div class="col-lg-4 col-md-6">
+          <div class="bundle-card h-100 text-center p-4 rounded-4">
+            <h4>Any 2 Brownies</h4>
+            <p class="small mb-3">Mix and match any two flavours.</p>
+            <p class="bundle-price mb-3">560 PKR</p>
+            <a href="order.html?item=Bundle%20-%20Any%202%20Brownies&tagline=Mix%20%26%20match%20any%202%20flavours&price=560"
+               target="_blank" class="btn btn-light w-75 mx-auto">Order</a>
+          </div>
+        </div>
+
+        <!-- Any 4 Brownies -->
+        <div class="col-lg-4 col-md-6">
+          <div class="bundle-card h-100 text-center p-4 rounded-4">
+            <h4>Any 4 Brownies</h4>
+            <p class="small mb-3">Four flavours, one very good box.</p>
+            <p class="bundle-price mb-3">1050 PKR</p>
+            <a href="order.html?item=Bundle%20-%20Any%204%20Brownies&tagline=Mix%20%26%20match%20any%204%20flavours&price=1050"
+               target="_blank" class="btn btn-light w-75 mx-auto">Order</a>
+          </div>
+        </div>
+
+        <!-- Family Box -->
+        <div class="col-lg-4 col-md-6">
+          <div class="bundle-card h-100 text-center p-4 rounded-4">
+            <h4>Family Box (12)</h4>
+            <p class="small mb-3">Twelve brownies. Sharing optional.</p>
+            <p class="bundle-price mb-3">2950 PKR</p>
+            <a href="order.html?item=Bundle%20-%20Family%20Box%20(12)&tagline=12%20Brownies&price=2950"
+               target="_blank" class="btn btn-light w-75 mx-auto">Order</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   
   <section class="py-5 bg-light text-dark" id="how-to-order">
     <div class="container">
@@ -294,7 +323,7 @@
         <div class="col-md-3">
           <div class="p-4 shadow-sm rounded-4 bg-white h-100">
             <h4 class="mb-3">Step 1</h4>
-            <p>Select your desired portion from the menu.</p>
+            <p>Select your brownie flavour or bundle from the menu.</p>
           </div>
         </div>
   
