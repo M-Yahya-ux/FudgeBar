@@ -1,0 +1,236 @@
+.image-section {
+    background-color: #ffffff;
+    padding: 60px 0; /* optional spacing around the container */
+  }
+  
+  .image-box {
+    background-image: url('/images/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  
+    height: 50vh;
+    width: 50%;
+  
+    border-radius: 30px;
+    overflow: hidden;
+  
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
+  
+    animation: floatLeftRight 4s ease-in-out infinite alternate;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes floatLeftRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50px);
+    }
+  }
+  
+  /* ✅ Responsive: Mobile Screens */
+  @media (max-width: 768px) {
+    .image-box {
+      width: 90%;
+      height: 40vh;
+      background-size: cover; /* better for small screens */
+      animation: floatLeftRightMobile 3s ease-in-out infinite alternate;
+    }
+  
+    @keyframes floatLeftRightMobile {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(20px);
+      }
+    }
+  }
+  
+  
+  
+  #menu{
+    background-color: #48261c;
+    background: #48261c !important;
+    background-image: url('/images/bg02.png') !important;
+    background-position: center !important;
+    background-size: cover !important;
+    overflow: hidden !important;
+  }
+  
+
+  #menu .card {
+    border: none !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.15) !important; /* semi-transparent white */
+
+    backdrop-filter: blur(5px) !important; /* the blur effect */
+    -webkit-backdrop-filter: blur(5px) !important; /* for Safari */
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  #menu .card img {
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  #menu .card h4,
+  #menu .card h5,
+  #menu .card p {
+    margin-bottom: 0.5rem;
+  }
+  
+  #menu .card a {
+    margin-top: auto;
+  }
+  
+  #menu .card h4{
+    font-family: 'Rubik Mono One', sans-serif !important;
+  }
+
+
+
+
+
+  /* ===== Menu carousel controls ===== */
+  #brownieCarousel .carousel-control-prev,
+  #brownieCarousel .carousel-control-next {
+    width: 52px;
+    height: 52px;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    opacity: 1;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+  }
+
+  #brownieCarousel .carousel-control-prev:hover,
+  #brownieCarousel .carousel-control-next:hover {
+    background-color: #fff;
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  #brownieCarousel .carousel-control-prev-icon,
+  #brownieCarousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+    background-color: transparent !important;
+    padding: 0 !important;
+    filter: invert(1);
+  }
+
+  .carousel-control-prev {
+    left: -70px; /* Move more to the left */
+  }
+
+  .carousel-control-next {
+    right: -70px; /* Move more to the right */
+  }
+
+  /* Keep the arrows on-screen on narrower desktops */
+  @media (max-width: 1199px) {
+    #brownieCarousel .carousel-control-prev {
+      left: -18px;
+    }
+    #brownieCarousel .carousel-control-next {
+      right: -18px;
+    }
+  }
+
+  /* ===== Menu carousel indicators ===== */
+  #brownieCarousel .carousel-indicators {
+    position: static;
+    margin: 1.5rem 0 0;
+  }
+
+  #brownieCarousel .carousel-indicators [data-bs-target] {
+    width: 34px;
+    height: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+  }
+
+  #brownieCarousel .carousel-indicators .active {
+    background-color: #fff;
+  }
+
+
+  /* ===== Collection headings (Classic / Premium) ===== */
+  #menu .collection-title {
+    font-family: 'Rubik Mono One', sans-serif !important;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: #f3e3d8;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  }
+
+  #menu .card:hover {
+    transform: translateY(-6px);
+  }
+
+
+  /* ===== Bundle Deals ===== */
+  #bundles {
+    background-color: #7B1120;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35));
+  }
+
+  #bundles h2 {
+    font-family: 'Rubik Mono One', sans-serif !important;
+    letter-spacing: 1px;
+  }
+
+  .bundle-card {
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .bundle-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .bundle-card h4 {
+    font-family: 'Rubik Mono One', sans-serif !important;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .bundle-card .bundle-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: auto;
+  }
+
+  .bundle-card a {
+    color: #7B1120;
+    font-weight: 600;
+  }
+
+  @media (max-width: 576px) {
+    #menu .collection-title {
+      font-size: 1.15rem;
+    }
+  }

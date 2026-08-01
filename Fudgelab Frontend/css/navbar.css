@@ -1,0 +1,47 @@
+.custom-navbar {
+    background-color: transparent;
+  
+    padding-bottom: 1rem;
+    z-index: 999;
+  }
+  
+  .navbar-container {
+    width: 60%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 30px 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-brand {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.6rem;
+  }
+  
+  .nav-link {
+    margin-left: 1rem;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 992px) {
+    .navbar-container {
+      width: 90%;
+      clip-path: none;
+      border-radius: 12px;
+    }
+  
+    .navbar-nav {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 1rem;
+      border-radius: 0 0 12px 12px;
+    }
+  
+    .nav-link {
+      margin-left: 0;
+      padding: 0.5rem 0;
+    }
+  }
+  
