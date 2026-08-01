@@ -1,7 +1,10 @@
 {
-    "name": "fudgebar",
+    "name": "fudgebar-frontend",
     "version": "1.0.0",
     "type": "module",
+    "scripts": {
+      "dev": "vercel dev --listen 3000"
+    },
     "dependencies": {
       "mongodb": "^5.7.0"
     }
