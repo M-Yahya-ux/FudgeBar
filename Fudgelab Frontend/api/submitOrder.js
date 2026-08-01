@@ -1,30 +1,4 @@
-import { MongoClient } from "mongodb";
-
-const uri = process.env.MONGODB_URI;
-const dbName = process.env.MONGODB_DB || "fudgebar";
-let cachedClient = null;
-
-async function connectToDatabase() {
-  if (cachedClient) return cachedClient;
-
-  if (!uri) {
-    throw new Error(
-      "MONGODB_URI is not set. Add it to your Vercel project's Environment Variables and redeploy."
-    );
-  }
-
-  console.log("🔌 Connecting to MongoDB:", uri.slice(0, 50) + "...", "| db:", dbName);
-
-  const client = new MongoClient(uri, {
-    serverApi: { version: '1', strict: true, deprecationErrors: true },
-    ssl: true,
-    tlsAllowInvalidCertificates: false
-  });
-
-  await client.connect();
-  cachedClient = client;
-  return client;
-}
+import { getDb, COLLECTION, safeTarget } from "./_db.js";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).send("Method not allowed");
@@ -37,21 +11,21 @@ export default async function handler(req, res) {
   }
 
   try {
-    console.log("🛒 Inserting order for:", name, phone);
+    console.log("🛒 Inserting order for:", name, phone, "->", safeTarget());
 
-    const client = await connectToDatabase();
-    const db = client.db(dbName);
+    const db = await getDb();
 
-    await db.collection("orders").insertOne({
+    await db.collection(COLLECTION).insertOne({
       name,
       address,
       phone,
       email,
       product,
+      status: "Pending",
       createdAt: new Date(),
     });
 
-    console.log("✅ Order inserted into MongoDB");
+    console.log("✅ Order inserted");
     res.status(200).json({ success: true });
   } catch (err) {
     console.error("❌ MongoDB Error:", err.message);

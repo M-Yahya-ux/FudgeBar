@@ -172,18 +172,43 @@
             product: productValue
           })
         });
-  
-        const data = await res.json();
-        if (data.success) {
+
+        const raw = await res.text();
+        let data;
+
+        try {
+          data = JSON.parse(raw);
+        } catch {
+          // Not JSON — the API route is missing, or the function crashed and
+          // the host returned an HTML error page instead.
+          console.error(
+            `[submitOrder] Expected JSON, got ${res.status} ${res.statusText}.`,
+            "\nURL:", res.url,
+            "\nBody:", raw.slice(0, 300),
+            res.status === 404
+              ? "\n\nHINT: /api/submitOrder does not exist at this address. " +
+                "Static servers (Live Server, npx serve) cannot run serverless " +
+                "functions — use `npm run dev` (vercel dev) instead."
+              : ""
+          );
+          alert("❌ Unable to reach the ordering service. Please try again later.");
+          return;
+        }
+
+        if (res.ok && data.success) {
           alert("✅ Your order has been placed successfully!");
           document.getElementById("orderForm").reset();
         } else {
+          console.error(
+            `[submitOrder] Server responded ${res.status}:`,
+            data.error || data
+          );
           alert("❌ Error placing your order. Please try again.");
-          console.error("Error:", data.error);
         }
       } catch (err) {
+        // fetch() itself failed: offline, DNS failure, or the dev server is down.
+        console.error("[submitOrder] Network request failed:", err);
         alert("❌ Unable to connect to the server. Please try again later.");
-        console.error(err);
       }
     });
   </script>

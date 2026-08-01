@@ -6,7 +6,7 @@
       "dev": "vercel dev --listen 3000"
     },
     "dependencies": {
-      "mongodb": "^5.7.0"
+      "mongodb": "^6.0.0"
     }
   }
   
